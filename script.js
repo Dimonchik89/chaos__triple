@@ -7,14 +7,11 @@ const fullWidth = container.offsetWidth;
 const fullHeight = container.offsetHeight;
 
 const form = document.querySelector("form");
-// const rangeTop = document.querySelector("#range-top");
 
 const customDot = `<div class="dot" data-id="handle" style="top: 300px; left: 300px"></div>`
 container.insertAdjacentHTML("beforeend", customDot)
 
 form.addEventListener("submit", handleSubmit);
-// rangeTop.addEventListener("change", hangleChangeTop)
-// rangeTop.setAttribute("max", container.offsetHeight)
 
 
 const dotATop = dotA.offsetTop;
@@ -26,7 +23,6 @@ const dotBLeft = dotB.offsetLeft;
 const dotCTop = dotC.offsetTop;
 const dotCLeft = dotC.offsetLeft;
 
-console.dir(container);
 
 function createMarkup(iterable) {
     let newDotTop = +document.querySelector('.dot[data-id="handle"]').offsetTop;
@@ -88,8 +84,4 @@ function handleSubmit(event) {
     
     createMarkup(iterable);
     event.target.elements.input.value = ""
-}
-
-function hangleChangeTop(event) {
-    console.log(event.target.value);
 }
